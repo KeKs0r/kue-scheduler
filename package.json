@@ -52,7 +52,7 @@
         "cron": "^1.0.9",
         "date.js": "^0.2.0",
         "human-interval": "^0.1.5",
-        "kue-unique": "^0.1.3",
+        "kue-unique": "https://github.com/KeKs0r/kue-scheduler/tarball/check_job",
         "lodash": "^3.10.1",
         "node-uuid": "^1.4.7"
     },
