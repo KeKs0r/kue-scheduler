@@ -1,6 +1,6 @@
 {
     "name": "kue-scheduler",
-    "version": "0.3.1",
+    "version": "0.4.2",
     "description": "A job scheduler utility for kue, backed by redis and built for node.js",
     "main": "index.js",
     "scripts": {
@@ -50,7 +50,7 @@
     "dependencies": {
         "async": "^1.5.0",
         "cron": "^1.0.9",
-        "date.js": "^0.2.0",
+        "date.js": "^0.2.1",
         "human-interval": "^0.1.5",
         "kue-unique": "https://github.com/KeKs0r/kue-unique/archive/check_job.zip",
         "lodash": "^3.10.1",
