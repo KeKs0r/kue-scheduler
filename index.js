@@ -864,10 +864,10 @@ Queue.prototype.shutdown = function( /*fn, timeout, type*/ ) {
     //close _scheduler,
     // _lister and
     // _cli redis connctions
-    this._listener.end();
-    this._scheduler.end();
+    this._listener.quit();
+    this._scheduler.quit();
     if (this._cli) {
-        this._cli.end();
+        this._cli.quit();
     }
 
     //then call previous Queue shutdown
@@ -989,7 +989,7 @@ Queue.prototype.remove = Queue.prototype.removeJob = function(criteria, done) {
                 var uuid;
 
                 if (criteria.unique) {
-                    uuid = this._generateJobUUID(criteria);
+                    uuid = this._generateJobUUID({data: criteria});
 
                     criteria.expiryKey = this._getJobExpiryKey(uuid);
                     criteria.dataKey = this._getJobDataKey(uuid);
